@@ -1,0 +1,4 @@
+configurationset:
+  - configuration:
+      name: curl_import_config
+      authentication_948ea574c9: brooklyn::stepzen.net+1000::66c1080ff175dd8760669a8865c9b754c521b5e2bf64e76529bab252a7498e84
