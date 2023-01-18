@@ -1,10 +1,13 @@
 import { categories } from "../constants";
 import fetchNews from "../lib/fetchNews";
-type Props = {}
 
-async function HomePage({}: Props) {
 
-    const news: NewsResponse = await fetchNews(categories.join(','))
+
+async function HomePage() {
+  const news: NewsResponse = await fetchNews(categories.join(","));
+
+  console.log(news)
+
 
   return (
     <div>page</div>
@@ -12,3 +15,4 @@ async function HomePage({}: Props) {
 }
 
 export default HomePage
+
