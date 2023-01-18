@@ -44,7 +44,7 @@ const fetchNews = async (
     const res = await fetch('https://brooklyn.stepzen.net/api/nguyen-news2/__graphql', {
         method: 'POST',
         cache: isDynamic ? "no-cache" : "default",
-        next: isDynamic ? { revalidate: 0 } : { revalidate: 60 },
+        next: isDynamic ? { revalidate: 0 } : { revalidate: 240 },
         headers: {
             "Content-Type": "application/json",
             Authorization: `Apikey ${process.env.STEPZEN_API_KEY}`,
