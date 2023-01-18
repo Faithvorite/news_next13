@@ -1,4 +1,5 @@
 import React from 'react'
+import ReadMoreButton from './ReadMoreButton';
 
 type Props = {
     article: DataEntry;
@@ -28,6 +29,8 @@ function Article({article}: Props) {
                     <p>{article.published_at}</p>
                 </footer>
             </div>
+
+            <ReadMoreButton article={article}/>
         </div>
     </article>
   )
