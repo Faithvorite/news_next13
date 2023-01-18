@@ -1,11 +1,24 @@
-import React from 'react'
+import fetchNews from '../../lib/fetchNews';
+import NewsList from '../NewsList';
 
-type Props = {}
+type Props = {
+    searchParams?: { term: string };
+}
 
-function page({}: Props) {
+async function SearchPage({ searchParams }: Props) {
+    const news: NewsResponse = await fetchNews(
+        "general",
+        searchParams?.term,
+        true
+    );
   return (
-    <div>page</div>
+    <div>
+        <h1 className='headerTitle'>Search results for:
+        {searchParams?.term}</h1>
+        
+        <NewsList news={news} />
+    </div>
   )
 }
 
-export default page
+export default SearchPage

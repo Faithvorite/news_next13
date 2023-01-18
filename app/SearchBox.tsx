@@ -1,6 +1,6 @@
-"use client"
+'use client'
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 type Props = {}
 
@@ -9,7 +9,7 @@ function SearchBox({}: Props) {
   const [input, setInput] = useState("");
   const router = useRouter();
   
-  const handleSearch = ({e}: any) => {
+  const handleSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!input) return;
 
@@ -19,7 +19,7 @@ function SearchBox({}: Props) {
   return (
     <form 
       onSubmit={handleSearch}
-      className='max-w-6xl mx-auto flex justify-between items-center px-5'
+      className='max-w-6xl mx-auto flex justify-between items-center px-5 cursor-pointer'
     >
 
       <input 

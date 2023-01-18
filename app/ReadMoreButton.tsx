@@ -14,9 +14,7 @@ function ReadMoreButton({ article }: Props) {
     .map(([key, value]) => `${key}=${value}`)
     .join("&");
 
-    // queryString.replace(/#/g, "[other character]");
-
-    const url = `/article?${queryString.replace(/#/g, "[other character]")}`;
+    const url = `/article?${queryString}`;
     console.log(url);
     router.push(url);
   };
