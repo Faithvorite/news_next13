@@ -6,8 +6,7 @@ import response from '../response.json'
 
 
 async function HomePage() {
-  const news: NewsResponse = 
-  response || (await fetchNews(categories.join(",")));
+  const news: NewsResponse = await fetchNews(categories.join(","));
 
   return (
     <div>
