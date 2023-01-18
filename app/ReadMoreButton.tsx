@@ -22,7 +22,7 @@ function ReadMoreButton({ article }: Props) {
   return (
     <button
     onClick={handleClick}
-    className="bg-orange-400 h-10 rounded-b-lg dark:text-gray-900 hover:bg-orange-500"
+    className="bg-[rgb(133,56,56)] text-white h-10 rounded-b-lg tracking-wider lowercase font-serif hover:bg-[rgb(216,85,85)]/90"
     >
       Read More
 
