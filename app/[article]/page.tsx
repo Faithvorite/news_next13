@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import React from 'react'
+export const dynamic = 'force-dynamic'
 
 type Props = {
   searchParams?: DataEntry;
@@ -14,7 +15,7 @@ function ArticlePage({ searchParams }: Props) {
   }
 
   const article: DataEntry = searchParams;
-
+  
   return (
     <article>
       <section className='flex flex-col lg:flex-row pb-24 px-0 lg:px-10'>
